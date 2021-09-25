@@ -12,6 +12,10 @@ function contar() {
         let f = Number(fim.value)
         let p = Number(passo.value)
 
+        if (p <= 0) {
+            window.alert('Passo  invalido! Considerando Passo 1')
+            p = 1
+        }
         if (i <f){
             for(let c = i; c<= f; c += p) {
                 res.innerHTML += `${c} \u{1F4C8}`
